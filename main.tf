@@ -7,3 +7,8 @@ resource "aws_subnet" "friday_subnet_1" {
     cidr_block =  var.SN-1-cidr
     vpc_id = aws_vpc.friday_vpc.id
 }
+resource "aws_internet_gateway" "friday_igw" {
+    vpc_id = aws_vpc.friday_vpc.id
+  
+}
+
